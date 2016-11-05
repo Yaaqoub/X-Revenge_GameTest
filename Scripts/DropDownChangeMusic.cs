@@ -1,39 +1,34 @@
+/**
+ * YAAQOUB SEMLALI & YASSINE CHETOUANE ;
+ * semlali.yaaqoub@gmail.com ;
+ * GameName : XRevenge ( FPS Game ) | Final Year Project ;
+ **/
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class DropDownChangeMusic : MonoBehaviour 
-{
+public class DropDownChangeMusic : MonoBehaviour {
     public Dropdown changeMusic;
     public AudioClip[] musicListe;
 
     AudioSource music;
 
-    void Start()
-    {
+    void Start() {
         music = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-
-    }
-    public void Changer()
-    {
-        if (changeMusic.value == 0)
-        {
+    public void Changer() {
+        if (changeMusic.value == 0) {
             music.clip = musicListe[0];
             music.Play();
         }
 
-        if (changeMusic.value == 1)
-        {
+        if (changeMusic.value == 1) {
             music.clip = musicListe[1];
             music.Play();
         }
 
-        if (changeMusic.value == 2)
-        {
+        if (changeMusic.value == 2) {
             music.clip = musicListe[2];
             music.Play();
         }
