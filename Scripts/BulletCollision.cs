@@ -1,3 +1,8 @@
+/**
+ * YAAQOUB SEMLALI & YASSINE CHETOUANE ;
+ * semlali.yaaqoub@gmail.com ;
+ * GameName : XRevenge ( FPS Game ) | Final Year Project ;
+ **/
 using UnityEngine;
 using System.Collections;
 
@@ -12,7 +17,6 @@ public class BulletCollision : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col) {
-        
         if (col.gameObject.tag == "Enemy") {
             //Debug.Log(col.gameObject.name + " is an enemy! You did " + damage + " damage!!");
 
@@ -20,6 +24,5 @@ public class BulletCollision : MonoBehaviour {
             //enemyHealth.ModifyHealth(-damage);
         }
         Destroy(this.gameObject);
-    }
-    
+    } 
 }
