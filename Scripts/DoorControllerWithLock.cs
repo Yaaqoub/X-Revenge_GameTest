@@ -1,12 +1,12 @@
-/* YAAQOUB SEMLALI ;
+/**
+ * YAAQOUB SEMLALI & YASSINE CHETOUANE ;
  * semlali.yaaqoub@gmail.com ;
  * GameName : XRevenge ( FPS Game ) | Final Year Project ;
- */
+ **/
 using UnityEngine;
 using System.Collections;
 
-public class DoorControllerWithLock : MonoBehaviour 
-{
+public class DoorControllerWithLock : MonoBehaviour {
     public float doorOpenAngle = 90.0f;
     public float doorCloseAngle = 0.0f;
     public float doorAnimSpeed = 2.0f;
@@ -21,8 +21,7 @@ public class DoorControllerWithLock : MonoBehaviour
     private bool doorStatus; 
     private bool doorGo = false;
 
-    void Start()
-    {
+    void Start() {
         doorStatus = false;
 
         doorOpen = Quaternion.Euler(0, -doorOpenAngle, 0);
@@ -30,33 +29,27 @@ public class DoorControllerWithLock : MonoBehaviour
         
         playerTrans = GameObject.Find("MyPlayer").transform;
     }
-    void Update()
-    {
+    
+    void Update() {
         
-        if (Input.GetKeyDown(KeyCode.F) && !doorGo && shoot.lockState == true)
-        {
+        if (Input.GetKeyDown(KeyCode.F) && !doorGo && shoot.lockState == true) {
             //Distance between player and door
-            if (Vector3.Distance(playerTrans.position, this.transform.position) < 2f)
-            {
-                if (doorStatus)
-                { 
+            if (Vector3.Distance(playerTrans.position, this.transform.position) < 2f) {
+                if (doorStatus) { 
                     StartCoroutine(this.moveDoor(doorClose));
                     AudioSource.PlayClipAtPoint(doorSound[1], transform.position);
                 }
-                else
-                { 
+                else { 
                     StartCoroutine(this.moveDoor(doorOpen));
                     AudioSource.PlayClipAtPoint(doorSound[0], transform.position);
                 }
             }
         }
     }
-    public IEnumerator moveDoor(Quaternion dest)
-    {
+    public IEnumerator moveDoor(Quaternion dest) {
         doorGo = true;
         //Check if close/open, if angle less 4 degree, or use another value more 0
-        while (Quaternion.Angle(transform.localRotation, dest) > 4.0f)
-        {
+        while (Quaternion.Angle(transform.localRotation, dest) > 4.0f) {
             transform.localRotation = Quaternion.Slerp(transform.localRotation, dest, Time.deltaTime * doorAnimSpeed);
             yield return null;
         }
