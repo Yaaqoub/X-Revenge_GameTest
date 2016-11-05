@@ -7,7 +7,7 @@ using UnityEngine;
 using System.Collections;
 
 public class DestroyBulletHole : MonoBehaviour {
-	void Update () {
+		void Update () {
         Destroy(this.gameObject, 1);
-	}
+		}
 }
