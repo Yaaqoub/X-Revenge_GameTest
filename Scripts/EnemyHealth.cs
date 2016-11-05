@@ -1,13 +1,16 @@
+/**
+ * YAAQOUB SEMLALI & YASSINE CHETOUANE ;
+ * semlali.yaaqoub@gmail.com ;
+ * GameName : XRevenge ( FPS Game ) | Final Year Project ;
+ **/
 using UnityEngine;
 using System.Collections;
 
-public class EnemyHealth : MonoBehaviour
-{
+public class EnemyHealth : MonoBehaviour {
     public int startingHealth = 100;            // The amount of health the enemy starts the game with.
     public int currentHealth;                   // The current health the enemy has.
     public int scoreValue = 1;                 // The amount added to the player's score when the enemy dies.
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
-
 
     Animation anim;                              // Reference to the animator.
     AudioSource enemyAudio;                     // Reference to the audio source.
@@ -16,8 +19,7 @@ public class EnemyHealth : MonoBehaviour
 
     EnemyMovementMax enemyMove;
     NavMeshAgent nav;
-    void Awake()
-    {
+    void Awake() {
         // Setting up the references.
         anim = GetComponent<Animation>();
         enemyAudio = GetComponent<AudioSource>();
@@ -29,16 +31,13 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    public void TakeDamage(int amount)
-    {
+    public void TakeDamage(int amount) {
         // If the enemy is dead...
-        if (isDead)
-        {
+        if (isDead) {
             // ... no need to take damage so exit the function.
             return;
         }
             
-
         // Play the hurt sound effect.
         enemyAudio.Play();
 
@@ -46,16 +45,13 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= amount;
 
         // If the current health is less than or equal to zero...
-        if (currentHealth <= 0)
-        {
+        if (currentHealth <= 0) {
             // ... the enemy is dead.
             Death();
         }
     }
 
-
-    void Death()
-    {
+    void Death() {
         nav.enabled = false;
         enemyMove.enabled = false;
         // The enemy is dead.
