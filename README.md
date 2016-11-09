@@ -1,14 +1,29 @@
 # X-Revenge_GameTest
-Video game FPS made with Unity3D, it's my first game with Unity3D so i can learn how to made a game with Unity and how to program it. so i decided to share the code if any one want to improve it or learn from it.
 
-## How To Test or Use The Game
-To use or test this game:
-1- download [Unity3D](https://store.unity.com/), and import this project.
-2- download
-In "MySQLCon.cs" script change the variable addScoreURL
+Video game FPS made with Unity3D, it's our first game with Unity3D so we can learn how to made a game with Unity and how to program it. so we decided to share the code if any one want to improve it or learn from it.
+
+## Use the Scripts
+
+Any one can use and edite the scripts in any way he want, there is no conditions you can delete my name or anything you want.
+
+### N.B.
+We linked this game with a database, to change the database path
+* **MySQLCon.cs**
 ```
 public string addScoreURL = "http://localhost:81/projet/Connexion/addscore_Unity.php";
 ```
-to your own local host
+* **PlayerName.cs**
+```
+WWW w = new WWW("http://localhost:81/projet/Connexion/login_Unity.php", form);
+```
+But you have to create a database who matches our's,, all is in the script MySQLCon.cs .
 
-# this readme is not finished
+## Built With
+
+* [Unity3D](https://store.unity.com/) -  Cross-platform game engine.
+* [Visual Studio](https://www.visualstudio.com/vs/) -   Integrated development environment (IDE)
+
+## Authors
+
+* **Yaaqoub Semlali** - [GitHub](https://github.com/Yaaqoub) - [LinkedIn](www.linkedin.com/in/semlaliyaaqoub)
+* **Yassine Chetouane**
