@@ -25,5 +25,5 @@ But you have to create a database who matches our's,, all is in the script MySQL
 
 ## Authors
 
-* **Yaaqoub Semlali** - [GitHub](https://github.com/Yaaqoub) - [LinkedIn](www.linkedin.com/in/semlaliyaaqoub)
+* **Yaaqoub Semlali** - [GitHub](https://github.com/Yaaqoub) - [LinkedIn](https://www.linkedin.com/in/semlaliyaaqoub)
 * **Yassine Chetouane**
