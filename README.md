@@ -1,6 +1,7 @@
 # X-Revenge_GameTest
 
 Video game FPS made with Unity3D, it's our first game with Unity3D so we can learn how to made a game with Unity and how to program it. so we decided to share the code if any one want to improve it or learn from it.
+to see the project report [click here](https://drive.google.com/file/d/0B40h0WEut28yOXd4T2x2cml4enc/view)
 
 ## Use the Scripts
 
